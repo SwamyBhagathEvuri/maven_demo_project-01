@@ -10,6 +10,9 @@
     <artifactId>my-maven-project</artifactId>
     <version>1.0</version>
 
+    <!-- Packaging Type -->
+    <packaging>jar</packaging>
+
     <dependencies>
 
         <!-- JUnit Dependency -->
