@@ -32,7 +32,7 @@ pipeline {
                 sh '''
                     scp -o StrictHostKeyChecking=no \
                     -i ${PEM_FILE} \
-                    target/java21-tomcat10-demo-1.0.0.war \
+                    target/my-maven-project-1.0.war \
                     ${TOMCAT_USER}@${TOMCAT_HOST}:/opt/tomcat/webapps/
                 '''
             }
@@ -44,7 +44,7 @@ pipeline {
                     ssh -o StrictHostKeyChecking=no \
                     -i ${PEM_FILE} \
                     ${TOMCAT_USER}@${TOMCAT_HOST} \
-                    "ls -ltr /opt/tomcat/webapps | grep java21"
+                    "ls -ltr /opt/tomcat/webapps | grep my-maven-project"
                 '''
             }
         }
